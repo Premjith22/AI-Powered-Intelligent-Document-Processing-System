@@ -144,14 +144,6 @@ AI-Powered-Intelligent-Document-Processing-System
 
 ---
 
-## 🚀 FastAPI Swagger API
-
-<p align="center">
-<img src="screenshots/swagger_api.png" width="900">
-</p>
-
----
-
 # ⚙ Workflow
 
 1. Upload a document.
