@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+venv/
+.venv/
+
+# Environment Variables
+.env
+
+# VS Code
+.vscode/
+
+# Streamlit
+.streamlit/
+
+# Uploads
+Backend/uploads/
+
+# OS
+Thumbs.db
+.DS_Store
