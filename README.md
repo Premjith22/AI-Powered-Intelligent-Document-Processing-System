@@ -1,82 +1,77 @@
+<div align="center">
+
 # 📄 AI-Powered Intelligent Document Processing System
 
-An AI-powered document processing application that automatically classifies business documents, extracts structured information using an LLM, validates the extracted data, and allows users to review and download the results.
+### AI-powered document classification, information extraction, validation, and human review using Large Language Models.
+
+![Python](https://img.shields.io/badge/Python-3.12+-blue?style=for-the-badge&logo=python)
+![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?style=for-the-badge&logo=fastapi)
+![Streamlit](https://img.shields.io/badge/Streamlit-Frontend-FF4B4B?style=for-the-badge&logo=streamlit)
+![Groq](https://img.shields.io/badge/Groq-LLM-orange?style=for-the-badge)
+
+</div>
 
 ---
 
-# 🚀 Features
+# 📖 Overview
 
-- Automatic document classification
-- AI-based information extraction
-- Rule-based validation
-- Human review interface
-- JSON output
-- REST API using FastAPI
-- Interactive UI using Streamlit
+This project is an **AI-powered Intelligent Document Processing System** that automatically classifies business documents, extracts structured information using a Large Language Model (LLM), validates extracted data using deterministic Python rules, and provides a Human Review interface before exporting structured JSON.
+
+The project demonstrates how AI and rule-based systems can work together to build reliable enterprise document-processing workflows.
+
+---
+
+# ✨ Features
+
+- 📄 Automatic Document Classification
+- 🤖 AI-powered Information Extraction
+- ✔ Rule-based Data Validation
+- 👤 Human Review & Correction
+- 📊 Confidence Score
+- ⚡ FastAPI REST API
+- 🖥 Interactive Streamlit Dashboard
+- 📦 Download Structured JSON
 
 ---
 
 # 📂 Supported Document Types
 
-- Invoice
-- Resume
-- Purchase Order
-- Contract
+| Document | Supported |
+|----------|-----------|
+| Invoice | ✅ |
+| Resume | ✅ |
+| Purchase Order | ✅ |
+| Contract | ✅ |
 
 ---
 
-# 🏗 Architecture
+# 🏗 System Architecture
 
-```
+```text
                 Upload Document
                        │
                        ▼
-              Document Reader
+             Document Reader
                        │
                        ▼
-             AI Document Classifier
+         AI Document Classifier
                        │
                        ▼
-          AI Information Extractor
+      AI Information Extractor
                        │
                        ▼
-         Deterministic Validator
+      Deterministic Validator
                        │
                        ▼
-           Human Review (UI)
+      Human Review & Correction
                        │
                        ▼
-               JSON / API Output
+        Structured JSON Output
 ```
 
 ---
 
-# 🤖 AI Components
-
-The Large Language Model is responsible for:
-
-- Document Classification
-- Information Extraction
-- Understanding different document layouts
-- Extracting structured JSON
-
----
-
-# ✔ Deterministic Components
-
-Python validation is used for:
-
-- Email validation
-- Phone validation
-- GST validation
-- Amount validation
-- Date validation
-
-Using deterministic logic for validation makes the system faster, cheaper and more reliable than sending another request to the LLM.
-
----
-
-# 🛠 Tech Stack
+# 🛠 Technology Stack
 
 ## Backend
 
@@ -95,228 +90,202 @@ Using deterministic logic for validation makes the system faster, cheaper and mo
 
 ---
 
-# 📁 Project Structure
+# 📂 Project Structure
 
-```
-AI-Document-Processor/
-
+```text
+AI-Powered-Intelligent-Document-Processing-System
 │
-
-├── Backend/
-
+├── Backend
 │   ├── ai_client.py
-
-│   ├── classifier.py
-
-│   ├── extractor.py
-
-│   ├── validator.py
-
-│   ├── document_reader.py
-
-│   ├── document_processor.py
-
 │   ├── app.py
-
+│   ├── classifier.py
+│   ├── extractor.py
+│   ├── validator.py
+│   ├── document_reader.py
+│   ├── document_processor.py
 │
-
-├── Frontend/
-
+├── Frontend
 │   └── streamlit_app.py
-
 │
-
-├── Sample_Documents/
-
+├── Sample_Documents
 │
-
+├── screenshots
+│
 ├── requirements.txt
-
-│
-
-└── README.md
+├── README.md
+└── .gitignore
 ```
 
 ---
 
 # 📸 Application Screenshots
 
----
-
 ## 🏠 Home Page
 
-The main dashboard where users can upload business documents for processing.
-
 <p align="center">
-  <img src="screenshots/home.png.jpg" width="900">
+<img src="screenshots/home.png" width="900">
 </p>
 
 ---
 
 ## 📊 Processing Summary
 
-Displays the AI-generated document type, confidence score, review status, and processing time.
-
 <p align="center">
-  <img src="screenshots/processing_summary.png" width="900">
+<img src="screenshots/processing_summary.png" width="900">
 </p>
 
 ---
 
 ## 📦 Structured JSON Output
 
-Shows the extracted structured JSON and allows downloading the corrected result.
-
 <p align="center">
-  <img src="screenshots/JSON.png" width="900">
+<img src="screenshots/JSON.png" width="900">
 </p>
 
 ---
 
-## 🚀 FastAPI Swagger Documentation
-
-Interactive API documentation generated by FastAPI.
+## 🚀 FastAPI Swagger API
 
 <p align="center">
-  <img src="screenshots/swagger_api.png" width="900">
+<img src="screenshots/swagger_api.png" width="900">
 </p>
 
+---
 
-# ▶ How to Run
+# ⚙ Workflow
 
-## Clone repository
+1. Upload a document.
+2. AI classifies the document type.
+3. AI extracts structured fields.
+4. Python validates extracted information.
+5. User reviews and edits extracted fields.
+6. Updated JSON is generated and downloaded.
+
+---
+
+# ▶ Running the Project
+
+## Clone Repository
 
 ```bash
-git clone <repository_url>
+git clone https://github.com/Premjith22/AI-Powered-Intelligent-Document-Processing-System.git
 ```
 
----
-
-## Install dependencies
+## Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
----
-
 ## Configure Environment
 
-Create a `.env` file.
+Create a `.env` file:
 
-```
+```text
 GROQ_API_KEY=YOUR_API_KEY
 ```
 
----
-
-## Start Backend
+## Run Backend
 
 ```bash
 cd Backend
-
 uvicorn app:app --reload
 ```
 
----
-
-## Start Frontend
+## Run Frontend
 
 ```bash
 cd Frontend
-
 streamlit run streamlit_app.py
 ```
 
 ---
 
-# 📤 API Endpoint
+# 📡 API Endpoint
 
-POST
+### POST
 
 ```
 /process-document
 ```
 
-Returns
+Example Response
 
 ```json
 {
-    "status": "success",
-    "document_type": "...",
-    "confidence": "...",
-    "fields": {},
-    "validation": {}
+  "status": "success",
+  "document_type": "Invoice",
+  "confidence": "98% (High)",
+  "needs_review": false,
+  "fields": {},
+  "validation": {}
 }
 ```
 
 ---
 
-# 📈 Design Decisions
+# 🧠 Design Decisions
 
-### Why AI?
+## Why use AI?
 
-AI is used where semantic understanding is required:
+AI is responsible for:
 
-- Document classification
-- Information extraction
+- Document Classification
+- Information Extraction
+- Understanding different document layouts
 
-Traditional rule-based approaches struggle with varying document layouts, whereas an LLM can generalize across formats.
+Traditional rule-based approaches struggle with varying document structures, whereas an LLM generalizes across multiple layouts.
 
 ---
 
-### Why Deterministic Validation?
+## Why Deterministic Validation?
 
-Validation is implemented using Python rather than AI because:
+Validation is implemented using Python because it is:
 
-- Faster execution
-- Lower cost
+- Faster
+- Less expensive
 - More predictable
 - Easier to maintain
 
 ---
 
-### Extensibility
+## Human-in-the-Loop
 
-The architecture separates:
+Instead of blindly trusting AI output, the system allows users to:
 
-- Reading documents
-- Classification
-- Extraction
-- Validation
-- API
-- User Interface
+- Review extracted information
+- Edit incorrect fields
+- Download corrected JSON
 
-Adding a new document type only requires:
-
-- A new extraction prompt
-- New validation rules (if applicable)
-
-No other components need modification.
+This approach improves reliability and mirrors real-world enterprise document processing systems.
 
 ---
 
-# ⚠ Assumptions
+# 🔮 Future Enhancements
 
-- Primary input format is machine-readable PDF.
-- Documents contain sufficient text for AI extraction.
-- Users manually review extracted information before download.
-
----
-
-# 🚀 Future Improvements
-
-- OCR support for scanned PDFs
-- Image (JPG/PNG) processing
-- Confidence scoring per field
+- OCR for scanned PDFs
+- Image (JPG/PNG) support
 - Batch document processing
 - Database integration
 - User authentication
-- Export to Excel
-- Human feedback loop for AI improvement
+- Docker deployment
+- Excel export
+- Per-field confidence scores
 
-
+---
 
 # 👨‍💻 Author
 
-Premjith P M
+**Premjith P M**
+
+Computer Science Engineer | Python Developer | AI Enthusiast
+
+GitHub: https://github.com/Premjith22
+
+---
+
+<div align="center">
+
+⭐ If you found this project interesting, consider giving it a star.
+
+</div>
