@@ -261,6 +261,13 @@ This approach improves reliability and mirrors real-world enterprise document pr
 
 ---
 
+
+# 🎥 Project Demonstration
+
+A short walkthrough of the project is available here:
+
+▶ https://youtu.be/rKDjYjCvPKc?feature=shared
+
 # 🔮 Future Enhancements
 
 - OCR for scanned PDFs
